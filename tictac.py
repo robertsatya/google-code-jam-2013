@@ -42,7 +42,7 @@ def read_game(f):
 
 def main():
     output = []
-    with open("tictac_in.txt","r") as f:
+    with open("A-large.in","r") as f:
         trials = f.readline()
         for i in range(int(trials.strip())):
             state = read_game(f)
@@ -50,7 +50,7 @@ def main():
             outline = "Case #%d: %s" % (i+1, determine_game_status(state))
             print outline
             output.append(outline)
-    with open("tictac_out.txt","w") as f:
+    with open("tictac_out_large","w") as f:
         f.write("\n".join(output))
 
 if __name__ == "__main__":
